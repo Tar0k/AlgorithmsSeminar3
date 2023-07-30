@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorigthmsSeminar3", "AlgorigthmsSeminar3\AlgorigthmsSeminar3.csproj", "{A8CF528D-A0BC-4F43-B59F-E53313C6A325}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsSeminar3", "AlgorithmsSeminar3\AlgorithmsSeminar3.csproj", "{A8CF528D-A0BC-4F43-B59F-E53313C6A325}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
