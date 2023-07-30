@@ -2,8 +2,8 @@
 
 public class MyLinkedList<T>
 {
-    public Node<T> Head { get; set; }
-    public Node<T> Tail { get; set; }
+    private Node<T> Head { get; set; }
+    private Node<T> Tail { get; set; }
     
     public MyLinkedList(Node<T> node)
     {
