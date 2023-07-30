@@ -2,19 +2,20 @@
 
 public class MyLinkedList<T>
 {
-    private Node<T> Head { get; set; }
-    private Node<T> Tail { get; set; }
-    
-    public MyLinkedList(T value)
-    {
-        var node = new Node<T>(value);
-        Head = node;
-        Tail = node;
-    }
+    private Node<T>? Head { get; set; }
+    private Node<T>? Tail { get; set; }
 
     public void AddInHead(T value)
     {
         var node = new Node<T>(value);
+        // Первый элемент
+        if (Head == null)
+        {
+            Head = node;
+            Tail = node;
+            return;
+        }
+        
         node.Next = Head;
         Head.Previous = node;
         Head = node;
@@ -23,6 +24,14 @@ public class MyLinkedList<T>
     public void AddInTail(T value)
     {
         var node = new Node<T>(value);
+        // Первый элемент
+        if (Head == null)
+        {
+            Head = node;
+            Tail = node;
+            return;
+        }
+        
         node.Previous = Tail;
         Tail.Next = node;
         Tail = node;
@@ -30,6 +39,8 @@ public class MyLinkedList<T>
 
     public void Reverse()
     {
+        if (Head?.Next == null) return;
+        
         var node = Head;
         Head = Tail;
         while (node.Next != null)
@@ -44,6 +55,8 @@ public class MyLinkedList<T>
 
     public override string ToString()
     {
+        if (Head == null) return "[]";
+        
         var data = new List<string> { Head.Value?.ToString() ?? "null" };
         var nextNode = Head.Next; 
         while (nextNode != null)
